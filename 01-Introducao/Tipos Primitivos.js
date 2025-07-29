@@ -1,6 +1,6 @@
 //Strings
 
-let nome = "Jonatas";   // Declara uma string usando aspas duplas
+let Nome = "Jonatas";   // Declara uma string usando aspas duplas
 let saudacao = 'Olá!'; // Declara uma string usando aspas simples
 let frase = `Olá, ${nome}!`;  // Template string com crase e variável inserida com ${}
 
