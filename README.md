@@ -75,8 +75,37 @@ console.log(nome); //A saída após a redeclaração do var.
 nome = "Carlos";
 console.log(nome); //Resultado da reatribuição será Carlos.
 ```
+# **Funçôes**<br>
 
+Funções são blocos de código reutilizáveis que executam uma tarefa específica. Você pode **declarar**, **chamar (invocar)** e até **passar dados** para elas.
 
+```Javascript
+var Mensagem = document.getElementById("Mensagem");
+
+function entrou() {
+    var Nome = prompt("Qual o seu nome?");
+    var Sobrenome = prompt("Qual o seu sobrenome?");
+    
+    if (Nome === "" || Nome === null) {
+        alert("Algo deu errado!");
+        Mensagem.innerHTML = "Clique aqui para acessar";
+    } else {
+        Mensagem.innerHTML = "Seja bem-vindo " + Nome + " " + Sobrenome;
+
+        let botaoSair = document.createElement("button");
+        botaoSair.innerText = "Sair da conta";
+        botaoSair.onclick = sair;
+
+        Mensagem.appendChild(botaoSair);
+    }
+}
+
+function sair() {
+    alert("Até breve!");
+    Mensagem.innerText = "Você saiu!";
+}
+
+```
 - `02-condicionais-e-loops` — Estruturas de decisão e repetição.
 - `03-funções` — Declaração de funções, arrow functions e parâmetros.
 - `04-objetos-e-arrays` — Manipulação de arrays e objetos.
