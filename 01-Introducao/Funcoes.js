@@ -5,8 +5,8 @@ function entrou(){
     var Nome = prompt("Qual o seu nome?")
     var Sobrenome = prompt("Qual o seu sobrenome?")
     if(Nome === "" || Nome === null){
-        alert("Bota o nome ai vai")
-        Mensagem.innerHTML = ("Clica para acessar ai va")
+        alert("Algo deu errado!")
+        Mensagem.innerHTML = ("Clique aqui para acessar")
     }else{
         Mensagem.innerHTML = ("Seja bem vindo " + Nome + " " + Sobrenome + " ")
 
@@ -22,6 +22,6 @@ function entrou(){
 }
 
 function sair(){
-    alert("Ja vai tarde");
-    Mensagem.innerText = ("Ja foi Otario")
+    alert("Ate Breve!");
+    Mensagem.innerText = ("Você Saiu!")
 }
