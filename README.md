@@ -91,7 +91,7 @@ if (idade >= 18) {
 }
 
 
-//Forma de uso do IF / ELSE em ternários
+//Forma de uso do IF / ELSE em ternários.
 
 ? //significa “se a condição for verdadeira”.
 
