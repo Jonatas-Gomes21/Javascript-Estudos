@@ -16,10 +16,9 @@ if (idade >= 18) {
 
 : //significa “senão” (o que acontece se a condição for falsa).
 
-let valor = 18;
+var numero = 10;
 
-let resultado = valor >= 18 ? "Valor maior que " + valor : "Valor menor que " + valor;
-console.log(resultado);
+numero === 10 ? console.log("NUMERO É IGUAL A 10") : console.log("NUMERO NÃO TEM O VALOR 10");
 
 
 // Utilização do igual(=) na condicional
