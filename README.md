@@ -75,44 +75,107 @@ console.log(nome); //A saída após a redeclaração do var.
 nome = "Carlos";
 console.log(nome); //Resultado da reatribuição será Carlos.
 ```
-# **Funçôes**<br>
+# **Condicionais**<br>
+
+```Javascript
+
+// IF / ELSE 
+
+let idade = 20;
+
+// O if verifica se a condição envolvendo a variável é verdadeira ou falsa.
+if (idade >= 18) {
+  console.log("Maior de idade");
+} else {
+  console.log("Menor de idade");
+}
+
+
+//Forma de uso do IF / ELSE em ternários
+
+? //significa “se a condição for verdadeira”.
+
+: //significa “senão” (o que acontece se a condição for falsa).
+
+var numero = 10;
+
+numero === 10 ? console.log("NUMERO É IGUAL A 10") : console.log("NUMERO NÃO TEM O VALOR 10");
+
+
+// Utilização do igual(=) na condicional
+
+(==) // Faz a conversão do valor seja para (número, string, boolean, etc.) e só depois compara.
+
+console.log(5 == "5");   
+// Aqui a string "5" é transformada em número → 5 == 5 → true
+
+console.log(0 == false); 
+// O boolean false é transformado em número (0) → 0 == 0 → true
+
+console.log("10" == true); 
+// O true vira número (1), "10" vira número (10) → 10 == 1 → false
+
+(===) // Ele vai compara valor e tipo ao mesmo tempo. Se os tipos forem diferentes, já retorna false.
+
+console.log(5 === "5");   // false → número diferente de string
+console.log(0 === false); // false → number diferente de boolean
+console.log(null === undefined); // false → tipos diferentes
+console.log(5 === 5);     // true  → valor e tipo iguais
+
+```
+# **Funções**<br>
 
 Funções são blocos de código reutilizáveis que executam uma tarefa específica. Você pode **declarar**, **chamar (invocar)** e até **passar dados** para elas.
 
 ```Javascript
 var Mensagem = document.getElementById("Mensagem");
 
-function entrou() {
-    var Nome = prompt("Qual o seu nome?");
-    var Sobrenome = prompt("Qual o seu sobrenome?");
-    
-    if (Nome === "" || Nome === null) {
-        alert("Algo deu errado!");
-        Mensagem.innerHTML = "Clique aqui para acessar";
-    } else {
-        Mensagem.innerHTML = "Seja bem-vindo " + Nome + " " + Sobrenome;
+//Criado a função com o ID atribuído a função onclick no HTML
+function entrou(){
+    var Nome = prompt("Qual o seu nome?")
+    var Sobrenome = prompt("Qual o seu sobrenome?")
+    if(Nome === "" || Nome === null){
+        alert("Algo deu errado!")
+        Mensagem.innerHTML = ("Clique aqui para acessar")
+    }else{
+        Mensagem.innerHTML = ("Seja bem vindo " + Nome + " " + Sobrenome + " ")
 
-        let botaoSair = document.createElement("button");
-        botaoSair.innerText = "Sair da conta";
-        botaoSair.onclick = sair;
+        let botaoSair = document.createElement("button"); //Cria um novo elemento com o create.Element e define qual o tipo do elemento vai ser criado.
 
-        Mensagem.appendChild(botaoSair);
+        botaoSair.innerText = "Sair da conta";//Cria um texto dentro do document(HTML) através do innerText.
+
+        botaoSair.onclick = sair;//Atribui ao botão a função (sair) e através do onclick a ação vai acontecer e a função vai ser ativada.
+
+        Mensagem.appendChild(botaoSair);//Utilizando o appendChild colocamos o botão no HTML inserindo o ID no qual o elemento vai ser adicionado.
     }
+   
 }
 
-function sair() {
-    alert("Até breve!");
-    Mensagem.innerText = "Você saiu!";
+function sair(){
+    alert("Ate Breve!");
+    Mensagem.innerText = ("Você Saiu!")
 }
-
 ```
-- `02-condicionais-e-loops` — Estruturas de decisão e repetição.
-- `03-funções` — Declaração de funções, arrow functions e parâmetros.
-- `04-objetos-e-arrays` — Manipulação de arrays e objetos.
-- `05-dom-e-eventos` — Interações com HTML e eventos do navegador.
-- `06-async-e-promises` — Programação assíncrona com Promises e async/await.
-- `07-projetos-práticos` — Pequenos projetos para fixação do conteúdo.
+# **Loops**<br>
+```Javascript
+//Loop WHILE    
 
+var x = 0; // contador inicial do loop
+
+// While = Enquanto. Enquanto 0 for menor que 10. O while vai continuar fazendo o loop. após chegar no numero 9, ele irá encerrar o loop.
+while(x < 10){
+    document.write("<br>O valor de x é: " + x);
+
+    x++; // Vai aumentando o valor de X a cada passada do loop
+}
+
+//Loop FOR
+
+// For = Usado quando sabemos quantas vezes queremos repetir
+for(a = 0; a < valor; a++){
+    document.write("<br> O valor de A = " + a);
+}
+```
 ## 🛠️ Tecnologias
 
 - JavaScript (ES6+)
