@@ -38,7 +38,7 @@ console.log(nome3); // o resultado desse console.log será o nome Jonatas.
 
 // Porem, o const não pode ser reatribuído, ou seja, caso seja feito uma reatribuição ou redeclaração, como abaixo, isso gerará um erro.
 
-nome3 = "Maria"; // Isso gerará um erro.(Reatribuição)
+nome3 = "Luana"; // Isso gerará um erro.(Reatribuição)
 
 const nome3 = "Carlos"; // Isso também gerará um erro.(Redeclaração)
 
