@@ -203,6 +203,76 @@ for(a = 0; a < valor; a++){
     document.write("<br> O valor de A = " + a);
 }
 ```
+
+# **Função Assíncrona**<br>
+```javascript
+//SetInterval
+//Ele executa uma função em um determinado intervalo de tempo. 
+
+//Por exemplo, a cada 1 segundo ele continua executando a função ate que seja parado usando um clearInterval.
+
+//Tanto o setInterval quanto o setTimeout recebem dois parâmetros: o primeiro é a função que será executada e o segundo e o tempo em milissegundos.
+
+//Neste exemplo, a função ação sera executada a cada 1 segundo e escrevera "Executando..." na tela ate que seja parado com clearInterval
+function acao(){
+    document.write("Executando...<br/>")
+}
+
+setInterval(acao, 1000)
+
+
+//SetTimeout.
+
+//No caso do setTimeout, a função será executada apenas uma vez, após o tempo especificado.
+
+//Neste exemplo, a função ação sera executada apenas uma vez, após 3 segundos, escrevendo "Executando..." na tela e depois disso, não sera mais executada.
+
+function acao(){
+    document.write("Executando...<br/>")
+}
+
+setTimeout(acao, 3000);
+```
+
+# **Objetos**<br>
+```Javascript
+// Objetos
+
+// São coleções de propriedades, onde cada propriedade é definida por uma chave e um valor.
+
+// Um objeto pode ser criado usando chaves {} e as propriedades são definidas como pares chave-valor.
+
+// Neste exemplo, criamos um objeto simples chamado "Carro" com algumas propriedades.
+// Dentro de um objeto simples não podemos ter propriedades repetidas, ou seja, não podemos ter duas propriedades com o mesmo nome.
+// Pois o JavaScript vai sobrepor a propriedade anterior e acontecerá isso a perda de dados.
+
+    let Carro = {
+        marca: "Toyota",
+        modelo: "Corolla",
+        ano: 2020,
+        cor: "Prata"
+    }
+
+console.log(Carro); // Mostra o objeto completo no console.
+
+// Acessando propriedades do objeto.
+console.log(Carro.marca); // Acessa a propriedade como "marca", "modelo", "ano" e "cor" do objeto Carro.
+
+//Um array de objetos.
+// Cada objeto dentro do array representa um usuário com suas respectivas propriedades.
+
+let Usuarios = [
+  { nome: "Jonatas", idade: 25, profissao: "Desenvolvedor" },
+  { nome: "Luana", idade: 30, profissao: "Designer" },
+  { nome: "Carlos", idade: 28, profissao: "Gerente de Projetos" }
+];
+
+console.log(Usuarios);
+
+// Acessando propriedades dos objetos dentro do array.
+console.log(Usuarios[0].nome); // Acessa o nome do primeiro usuário no array.
+console.log(Usuarios[1].profissao); // Acessa a profissão do segundo usuário no array.
+```
 ## 🛠️ Tecnologias
 
 - JavaScript (ES6+)
